@@ -1,38 +1,28 @@
-
-.nav-items{
-  background: black;
-}
-.nav-logo{
-  background: black;
-}
-.nav-toggle{
-  background: black;
-}
 .Navbar {
   height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0,0,0,1);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background: rgb(0, 0, 0);
 }
+
+
 
 .Navbar > .nav-logo {
-  font-weight: 700;
-  font-size: 21px;
   margin: 15px;
-  color: #ffffff;
-
+  font-size:50px;
+  color: white
 }
+
 
 .Navbar > .nav-items > a {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background: black;
   font-weight: 500;
   color: #ffffff;
   font-size: 16px;
   text-decoration: none;
   margin: 15px;
-  position: relative;
+  position:relative;
   opacity: 0.8;
 }
 
@@ -61,11 +51,11 @@
 
 @media (max-width: 700px) {
   .Navbar > .nav-items {
-    position: absolute;
+    position:fixed;
     top: 60px;
     display: flex;
     flex-direction: column;
-    background: black;
+    background: rgb(0, 0, 0);
     opacity: .8;
     left: 0;
     width: 100%;

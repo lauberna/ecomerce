@@ -1,21 +1,33 @@
 import React,{ useState } from 'react'
+import '../navBar/Navbar.css'
+import {GiMountains} from 'react-icons/gi'
 
-import './Navbar.css'
+import Cart from '../cart/Cart.js'
+
+
+
+
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false)
   return (
+    <>
     <div className="Navbar">
-        <img className="nav-logo" src={'../images/png-transparent-trek-bicycle-corporation-bicycle-shop-electric-bicycle-cycling-cycling-text-bicycle-logo.png'}></img>
+        <GiMountains className="nav-logo" />
         <div className={`nav-items ${isOpen && "open"}`}>
             <a href="/home">Home</a> 
             <a href="/bicicletas">Bicicletas</a> 
             <a href="/indumentaria">Indumentaria</a> 
-            <a href="/about-us ">Contacto</a> 
+            
+        </div>
+        <div>
+          <Cart/>
         </div>
         <div className={`nav-toggle ${isOpen && "open"}`} onClick={() => setIsOpen(!isOpen)}>
           <div className="bar"></div>
         </div>
     </div>
+    
+    </>
   )
 }
 
