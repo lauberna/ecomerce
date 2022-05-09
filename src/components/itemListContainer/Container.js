@@ -1,10 +1,12 @@
-import React from 'react'
+
+import Item from './item'
 import '../itemListContainer/ContainerCss.css'
+
 function Container({saludo='saludo'}) {
   return (
     <div className='Container'>
         <div>{saludo}</div>
-        <button onClick={()=> alert('hola')}>click me</button>
+        <Item/>
     </div>
   )
 }
