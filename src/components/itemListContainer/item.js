@@ -1,6 +1,6 @@
 import ItemCount from "./itemCount";
-import '../itemListContainer/item.css'
-import itemImg from '../../images/bici.jpg'
+import '../itemListContainer/item.css';
+import itemImg from '../../images/bici.jpg';
 
 export default function Item({price, name}) {
     return (
