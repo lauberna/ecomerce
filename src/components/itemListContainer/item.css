@@ -1,21 +1,44 @@
-.itemCount{
-    font-size: 25px;
-    border: 1px black;
+.item {
+    height: 500px;
+    min-width: 250px;
+    max-width: 320px;
+    text-align: center;
+    position: relative;
+    border-radius: 5%;
+    overflow: hidden;
+    margin: 1rem auto;
 }
-.btn1{
-    font-size: 20px;
-    margin: 10px;
+.item__img{
+    width: 400px;
+    padding-right: 60px;
 }
-.btn2{
-    font-size: 20px;
-    margin: 10px;
+.item__filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
 }
-.btn3{
-    font-size: 20px;
-    margin: 10px;
+.item__title {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.item__info{
-    margin-left: 20px;
-    font-size: 20px;
-    border: 1px 11;
+.item__price {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.item__info {
+    z-index: 2;
+    position: absolute;
+    bottom: 1rem;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }

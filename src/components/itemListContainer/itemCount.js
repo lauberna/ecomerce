@@ -1,19 +1,20 @@
 import { useState } from 'react';
-import '../itemListContainer/item.css'
+import './itemCount.css'
+import { GrAdd } from "react-icons/gr";
 function ItemCount({stock, initial, onAdd}) {
     const [cantidad, setCantidad] = useState(initial);
 
     function increase() {
         if (cantidad < stock) {
             setCantidad(cantidad + 1);
-        } else if (cantidad == stock){
+        } else if (cantidad === stock){
           alert(`no hay mas stock, limite ${stock} unidades`)
         }
     }
     function decrease() {
         if (cantidad > 1) {
             setCantidad(cantidad - 1);
-        } else if (cantidad == initial){
+        } else if (cantidad === initial){
           alert(`el minimo es de ${initial} productos`)
         }
     }
@@ -23,10 +24,10 @@ function ItemCount({stock, initial, onAdd}) {
 
     return (
         <div className="itemCount">
-            <button className='btn1' onClick={decrease}>-</button>
-            <span>{cantidad}</span>
-            <button className='btn2' onClick={increase}>+</button>
-            <button className='btn3' onClick={addToCart}>agregar</button>
+            <button id='less' className="itemCount__minusBtn" onClick={decrease}>-</button>
+            <span className="itemCount__quantity">{cantidad}</span>
+            <button id='plus' className="itemCount__plusBtn" onClick={increase}>+</button>
+            <button className="itemCount__addToCartBtn" onClick={addToCart}><GrAdd/></button>
         </div>
     );
 }
